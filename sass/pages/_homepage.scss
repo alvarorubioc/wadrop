@@ -52,3 +52,167 @@ main {
     }
 }
 
+#video-wall {
+    overflow: hidden;
+
+    @media ($below-mobile) {
+        .wp-block-cover {
+            min-height: 360px !important;
+            border-bottom: 1px solid var(--wp--preset--color--neutral-100);
+            color: var(--wp--preset--color--background) !important;
+
+            .wp-block-cover__inner-container {
+                &>.wp-block-group {
+                    min-height: 100% !important;
+                }
+            }
+
+            .wp-block-cover__background {
+                opacity: .5;
+            }
+        }        
+    }
+    @media ($above-laptop) {
+        .wp-block-cover {
+            border-top: 0 !important;
+        }
+    }
+
+    @media ($above-mobile) {
+        .wp-block-cover {
+            border-right: 1px solid var(--wp--preset--color--primary-80);
+            border-top: 1px solid var(--wp--preset--color--primary-80);
+            
+            &:not(.first-cover) {
+                .wp-block-cover__video-background,
+                .wp-block-cover__image-background,
+                .wp-block-cover__background {
+                    opacity: 0;
+                    transition: opacity 0.3s ease-in-out;
+                }
+                
+                .video-wall-text {
+                    opacity: 0;
+                    transform: translateY(5rem);
+                    transition: transform 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    color: var(--wp--preset--color--background) !important;
+                    
+                    .wp-block-cover__video-background,
+                    .wp-block-cover__image-background,
+                    .video-wall-text  {
+                       opacity: 1;
+                    }
+                    .wp-block-cover__background {
+                        opacity: .3;
+                    }
+    
+                    .video-wall-text  {
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+            &.first-cover {
+                color: var(--wp--preset--color--background) !important;
+                transition: opacity 0.3s ease-in-out;
+
+                .video-wall-text {
+                    transition: transform 0.3s ease-in-out;
+                }
+                
+                :has(.wp-block-cover:not(.first-cover):hover) & {
+                    color: var(--wp--preset--color--foreground) !important;
+                    
+                    .wp-block-cover__video-background,
+                    .wp-block-cover__image-background,
+                    .video-wall-text  {
+                       opacity: 0;
+                    }
+                    .wp-block-cover__background {
+                        opacity: 0;
+                    }
+    
+                    .video-wall-text  {
+                        transform: translateY(5rem);
+                    }
+                }
+            } 
+            
+        }
+    }
+}
+
+.box-color-backdrop {
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(4px);
+}
+
+.grid-reasons {
+    @media ($below-mobile) {
+        .wp-block-group:nth-of-type(1) {
+            order: 1;
+        }
+        .wp-block-group:nth-of-type(2) {
+            order: 2;
+        }
+        .wp-block-group:nth-of-type(3) {
+            order: 3;
+        }
+        .wp-block-group:nth-of-type(4) {
+            order: 4;
+        }
+        .wp-block-group:nth-of-type(5) {
+            order: 6;
+        }
+        .wp-block-group:nth-of-type(6) {
+            order: 5;
+        }
+        .wp-block-group:nth-of-type(7) {
+            order: 8;
+        }
+        .wp-block-group:nth-of-type(8) {
+            order: 7;
+        }
+        .wp-block-group:nth-of-type(9) {
+            order: 9;
+        }
+        .wp-block-group:nth-of-type(10) {
+            order: 10;
+        }
+        .wp-block-group:nth-of-type(11) {
+            order: 11;
+        }
+        .wp-block-group:nth-of-type(12) {
+            order: 12;
+        }
+    }
+
+}
+
+.wp-block-partners {
+
+    figure.wp-block-gallery {
+        max-height: 272px;
+        overflow-y: hidden;
+        transition: max-height .5s ease-in-out;
+
+    }
+
+    .toggle-wp-block-partners {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &.wp-block-partners--is-open {
+        
+        figure.wp-block-gallery {
+            max-height: 100vh;
+        }
+    }
+    
+}

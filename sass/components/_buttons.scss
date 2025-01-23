@@ -33,7 +33,7 @@
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link {
-	padding: calc(0.5rem - 2px) 2rem !important;
+	padding: calc(0.5rem - 2px) 2rem;
 }
 
 .wp-block-button.is-style-outline-with-arrow .wp-block-button__link {
@@ -42,5 +42,24 @@
     border-width: 2px;
     border-style: solid;
     color: currentColor;
-	padding: calc(0.5rem - 2px) 2rem !important;
+	padding: calc(0.5rem - 2px) 2rem;
+}
+
+.btn-prev-slide a.wp-block-button__link,
+.btn-next-slide a.wp-block-button__link {
+    padding: 0 !important;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	border-width: 1px;
+
+}
+
+.btn-prev-slide.disabled,
+.btn-next-slide.disabled {
+	pointer-events: none;
+	opacity: 0.5;
+	filter: invert(0.5);
 }

@@ -23,6 +23,17 @@ a.stretched-link, .stretched-link > a {
     }
 }
 
+.d-flex {
+    &-column {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
 .mt-0 {
     margin-block-start: 0;
 }
@@ -44,4 +55,10 @@ a.stretched-link, .stretched-link > a {
 .d-z-index-2 {
     z-index: 2;
     position: relative;
+}
+
+.order-2-mobile {
+    @media ($below-tablet) {
+        order: 2;
+    }
 }

@@ -38,13 +38,15 @@ Use it to make something cool, have fun, and share what you've learned.
 @use "base/fields";
 @use "base/forms";
 @use "base/utilities";
+@use "base/aligments";
+@use "base/media";
 
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
 @use "components/buttons";
 @use "components/cards";
-//@use "components/carousel";
+@use "components/carousel";
 @use "components/cover";
 @use "components/details";
 @use "components/group";
@@ -55,6 +57,7 @@ Use it to make something cool, have fun, and share what you've learned.
 @use "components/popover";
 @use "components/query";
 @use "components/search";
+@use "components/separator";
 
 
 /*--------------------------------------------------------------

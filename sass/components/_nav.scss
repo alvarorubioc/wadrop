@@ -1,2 +1,6 @@
 @use '../abstracts/mixins' as *;
 
+.wp-block-navigation .has-child .wp-block-navigation__submenu-container {
+    right: 0;
+    left: auto;
+}

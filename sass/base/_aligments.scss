@@ -1,0 +1,11 @@
+.is-style-title-has-image {
+	width: 100%;
+    display: flex;
+    position: relative;
+    gap: var(--wp--preset--spacing--10);
+    align-items: center;
+}
+
+.wp-block-post-terms a {
+    text-decoration: none;
+}

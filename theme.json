@@ -212,7 +212,7 @@
 							"src": [
 								"file:./assets/fonts/Manrope-VariableFont_wght.woff2"
 							],
-							"fontWeight": "300 500 700",
+							"fontWeight": "200 300 500 700",
 							"fontStyle": "normal",
 							"fontFamily": "Manrope"
 						}
@@ -222,12 +222,12 @@
 			"fontSizes": [
 				{
 					"name": "Display",
-					"size": "clamp(3rem, 8.8vw, 6.25rem)",
+					"size": "clamp(4rem, 8.8vw, 6.25rem)",
 					"slug": "display"
 				},
 				{
 					"name": "H1",
-					"size": "clamp(2.25rem, 4.8vw, 2.5rem)",
+					"size": "clamp(1.875rem, 4.8vw, 2.5rem)",
 					"slug": "heading-1"
 				},
 				{
@@ -308,7 +308,8 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--font-main)",
 					"fontSize": "var(--wp--preset--font-size--body)",
-					"lineHeight": "var(--wp--custom--line-height--normal)"
+					"lineHeight": "var(--wp--custom--line-height--normal)",
+					"fontWeight": "500"
 				}
 			},
 			"caption": {

@@ -111,4 +111,4 @@ function get_term_class($class, $term_id = 0, $taxonomy = '') {
 }
  
 
-
+register_nav_menus( array( 'primary' => esc_html__( 'Primary Menu', 'wadrop' ) ) );
