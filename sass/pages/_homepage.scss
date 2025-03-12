@@ -87,7 +87,7 @@ main {
                 .wp-block-cover__video-background,
                 .wp-block-cover__image-background,
                 .wp-block-cover__background {
-                    opacity: 0;
+                    opacity: 0.1;
                     transition: opacity 0.3s ease-in-out;
                 }
                 
@@ -127,11 +127,11 @@ main {
                     color: var(--wp--preset--color--foreground) !important;
                     
                     .wp-block-cover__video-background,
-                    .wp-block-cover__image-background,
-                    .video-wall-text  {
-                       opacity: 0;
+                    .wp-block-cover__image-background {
+                       opacity: 0.1;
                     }
-                    .wp-block-cover__background {
+                    .wp-block-cover__background,
+                    .video-wall-text {
                         opacity: 0;
                     }
     
@@ -215,4 +215,25 @@ main {
         }
     }
     
+}
+
+
+.wp-block-cb-carousel.testimonial-carousel {
+    
+    .slick-slide {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .slick-prev, .slick-next {
+        top: calc(50% - 32px) !important
+    }
+
+    .slick-prev {
+        left: -24px !important;
+    }
+
+    .slick-next {
+        right: -24px !important;
+    }
 }
